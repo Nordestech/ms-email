@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>Bem-vindo à Nordestech</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f2f4f5; font-family:Arial, Helvetica, sans-serif; color:#171717;">
+  <div style="display:none; max-height:0; overflow:hidden; opacity:0; color:transparent;">
+    Que bom ter você com a gente. Vamos construir algo incrível juntos!
+  </div>
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color:#f2f4f5;">
+    <tr>
+      <td align="center" style="padding:32px 12px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="width:100%; max-width:600px; background:#ffffff; border-radius:14px; overflow:hidden;">
+          <tr>
+            <td align="center" style="padding:26px 24px 20px; background:#080a08;">
+              <img src="cid:nordestech-logo" width="82" alt="Logo Nordestech" style="display:block; width:82px; max-width:100%; height:auto; border:0;">
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:34px 36px 12px;">
+              <p style="margin:0 0 12px; color:#72a900; font-size:12px; line-height:18px; font-weight:bold; letter-spacing:2px; text-transform:uppercase;">Boas-vindas à Nordestech</p>
+              <h1 style="margin:0 0 20px; color:#111111; font-size:28px; line-height:1.25; font-weight:800;">
+                Olá, <span th:text="${name}">Pessoa</span>! 👋
+              </h1>
+              <p style="margin:0 0 16px; color:#414141; font-size:16px; line-height:1.7;">
+                É um prazer ter você com a gente. Sua jornada começa agora!
+              </p>
+              <p style="margin:0 0 24px; color:#414141; font-size:16px; line-height:1.7;">
+                Na <strong style="color:#171717;">Nordestech</strong>, acreditamos que a tecnologia deve simplificar o dia a dia e ajudar pessoas e negócios a chegarem mais longe. Estamos felizes em fazer parte da sua jornada.
+              </p>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 26px;">
+                <tr>
+                  <td align="center" bgcolor="#b7f500" style="border-radius:7px;">
+                    <a th:href="${actionUrl}" href="#" style="display:inline-block; padding:14px 24px; color:#111111; font-size:15px; line-height:20px; font-weight:bold; text-decoration:none; border-radius:7px;">
+                      Conheça sua conta&nbsp; →
+                    </a>
+                  </td>
+                </tr>
+              </table>
+              <p style="margin:0 0 8px; color:#555555; font-size:14px; line-height:1.7;">
+                Se precisar de ajuda, basta responder a este e-mail. Estamos aqui para ajudar.
+              </p>
+              <p style="margin:0; color:#171717; font-size:15px; line-height:1.7; font-weight:bold;">Conte com a gente,<br>Equipe Nordestech</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 36px; background:#10130b; border-top:4px solid #b7f500;">
+              <p style="margin:0 0 8px; color:#b7f500; font-size:12px; line-height:18px; font-weight:bold; letter-spacing:1.5px;">NORDESTECH</p>
+              <p style="margin:0; color:#d4d4d4; font-size:12px; line-height:1.7;">
+                Soluções tecnológicas pensadas para você.<br>
+                <span th:if="${supportEmail != null}">Contato: <a th:href="'mailto:' + ${supportEmail}" th:text="${supportEmail}" style="color:#d4d4d4; text-decoration:underline;">suporte@exemplo.com</a><br></span>
+                <span th:if="${currentYear != null}" th:text="'© ' + ${currentYear} + ' Nordestech. Todos os direitos reservados.'">© 2026 Nordestech. Todos os direitos reservados.</span>
+                <span th:unless="${currentYear != null}">© Nordestech. Todos os direitos reservados.</span>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <p style="margin:16px 0 0; color:#8a8a8a; font-size:11px; line-height:1.6; text-align:center;">Esta é uma mensagem automática de boas-vindas.</p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

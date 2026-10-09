@@ -1,7 +1,7 @@
 package br.com.nordestech.email.controller;
 
-import br.com.nordestech.email.dto.EmailRequest;
-import br.com.nordestech.email.dto.EmailResponse;
+import br.com.nordestech.email.dto.request.EmailRequest;
+import br.com.nordestech.email.dto.response.EmailResponse;
 import br.com.nordestech.email.service.EmailService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
